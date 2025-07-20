@@ -1,6 +1,6 @@
-# WebRTC Video Calling Application Documentation
+# WebRTC Video Calling Application
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 
@@ -25,9 +25,9 @@ WebRTC-video-calling-site/
 
 ---
 
-## ⚙️ Code Architecture
+## Code Architecture
 
-### 🧩 Frontend (React + Vite)
+### Frontend (React + Vite)
 
 #### 1. **App Component** - `src/App.jsx`
 Main application component that sets up routing and socket context.
@@ -96,7 +96,7 @@ const handleJoin = (e) => {
 
 Main video calling interface with WebRTC peer-to-peer connection.
 
-##### 🖥 Media Stream Setup
+##### Media Stream Setup
 
 ```js
 const getMediaStream = async () => {
@@ -109,7 +109,7 @@ const getMediaStream = async () => {
 };
 ```
 
-##### 🔗 Peer Connection Setup
+##### Peer Connection Setup
 
 ```js
 const setupPeerConnection = (stream) => {
@@ -131,7 +131,7 @@ const setupPeerConnection = (stream) => {
 };
 ```
 
-##### 🔁 WebRTC Signaling
+##### WebRTC Signaling
 
 ```js
 // Create and send offer
@@ -160,9 +160,9 @@ const handleOffer = async (offer) => {
 
 ---
 
-### 🖥 Backend (Node.js + Socket.IO)
+### Backend (Node.js + Socket.IO)
 
-#### 📡 Signaling Server - `index.js`
+#### Signaling Server - `index.js`
 
 Socket.IO server that facilitates WebRTC signaling between peers.
 
@@ -198,7 +198,7 @@ io.on("connection", (socket) => {
 
 ---
 
-## 🔄 WebRTC Connection Flow
+## WebRTC Connection Flow
 
 1. **User A** joins room → Emits `join-room` event
 2. **User B** joins same room → Both users are in the room
@@ -211,7 +211,7 @@ io.on("connection", (socket) => {
 
 ---
 
-## 🧰 Key Technologies
+## Key Technologies
 
 * **Frontend**: React 18, Vite, React Router, Socket.IO Client
 * **Backend**: Node.js, Socket.IO Server, Express
@@ -221,7 +221,7 @@ io.on("connection", (socket) => {
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### STUN Server
 
@@ -240,7 +240,7 @@ Uses Google’s public STUN server for NAT traversal.
 
 ---
 
-## 🚀 Usage
+## Usage
 
 1. **Start signaling server**:
 
@@ -265,6 +265,6 @@ Uses Google’s public STUN server for NAT traversal.
 
 ---
 
-## ✅ Summary
+## Summary
 
 This architecture provides a complete WebRTC video calling solution with real-time signaling and peer-to-peer media streaming using modern frontend and backend technologies.
